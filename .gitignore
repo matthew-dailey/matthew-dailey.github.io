@@ -1,2 +1,5 @@
 _site
 .sass-cache
+
+# markdown files I just copied in root dir
+/*.markdown
