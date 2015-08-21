@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "*Actually* developing in Vagrant"
+title:  "Actually developing in Vagrant"
 date:   2015-08-20 19:00:00
 categories: vagrant intellij
 ---
@@ -22,7 +22,8 @@ Here is the code for [my first try](https://github.com/matthew-dailey/vagrantfil
 
 ### Vagrantfile
 The Vagrantfile is mostly straightforward.  Starting with the `vagrant init chef/centos-7.0`, I added X11 forwarding through SSH, extra memory, 4 CPUs, and specified a [provisioning script](#bootstrap.sh).  The extra CPUs are **needed**, or else you're in for a very sluggish experience with IntelliJ.
-```
+
+{% highlight ruby %}
 Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
@@ -43,13 +44,14 @@ Vagrant.configure(2) do |config|
   # script for provisioning dependencies
   config.vm.provision :shell, path: "bootstrap.sh"
 end
-```
+{% endhighlight %}
 
 ### bootstrap.sh
 You can name this script whatever you'd like as long as its specified in the Vagrantfile.  I designed mine to install libraries with `yum`, and any other software is installed manually (combinations of `wget` and `tar`).
 
 The first tricky piece was discovering what X11 libraries needed installing from the bare-bones CentOS 7 image in order to launch IntelliJ.  Other IDEs (I've tried VSCode) required even more X11 and GTK libraries, especially if you wanted a monospaced font.
-```
+
+{% highlight bash %}
 sudo yum update
 
 devtools='
@@ -64,14 +66,14 @@ libXrender
 sudo yum install -y \
     $x11_stuff \
     $devtools
-```
+{% endhighlight %}
 
 The only other "trick" in this script is that it will move any downloaded files to the `/vagrant` directory so that if you happen to build this image again, the downloaded files will exist on your host machine to speed up the provisioning.
 
 ### Running
 The README describes how to take the VM for a spin.  You'll have to go through first-time setup of IntelliJ after making the VM, but otherwise this should be a fully-working solution for developing inside your VM with acceptable performance.
 
-```
+{% highlight bash %}
 # mostly takes time to download and install dev tools
 vagrant up
 
@@ -81,4 +83,4 @@ vagrant ssh -- -Y
 # you are now in the VM
 git clone <my favorite java project>
 idea.sh &> idea.log &
-```
+{% endhighlight %}
