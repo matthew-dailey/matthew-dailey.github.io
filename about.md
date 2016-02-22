@@ -4,4 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This blog created using Jekyll.  You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll).
+This blog is mostly anything longer than a tweet that I either worked with, toyed with, or probably just read about.
+
+This blog created using [Jekyll](http://jekyllrb.com/) for the express purpose of putting it on GitHub pages, which is a pretty simple and fun to use service.

@@ -37,7 +37,7 @@ Channels 1, 6, and 11 seem to be pretty heavily used.  Why no love for the chann
 
 >If you look closely, you’ll notice that each of the channels are 5 MHz away from each other, but the Channel Width for 2.4 GHz is actually 20 MHz. What this means is while that the channel might be set to channel 6, it’s also partially using 5 and 7, and probably slightly interfering with 4 and 8.
 
-So they (and others) recommend using channels 1, 6, and 11 because their frequencies are more than the "channel width" away from eachother.
+So they (and others) recommend using channels 1, 6, and 11 because their frequencies are more than the "channel width" away from eachother.  Another [2010 post](http://www.dslreports.com/forum/r24974694-Wireless-channel-selection) seems to corroborate this idea.
 
 So, what's with channel 149?  That's part of the 5 GHz wifi band (that my router does not support).  Another [howtogeek article](http://www.howtogeek.com/222249/whats-the-difference-between-2.4-ghz-and-5-ghz-wi-fi-and-which-should-you-use/) (July 2015 this time) gives some more background, and this helpful tidbit:
 
