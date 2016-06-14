@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Notes on Spark 2.0 Performance"
+date:   2016-06-14 14:00:00
+categories: spark
+---
+
+This post is just a collection of notes I took during [a Meetup](https://www.meetup.com/Apache-Spark-Maryland/events/231625107/?_af=event&_af_eid=231625107) about Spark 2.0 performance.  The main takeaway was if you don't have to, **don't use the RDD API directly**.  The [DataFrame and Dataset](http://spark.apache.org/docs/latest/sql-programming-guide.html) abstractions offer better performance because of optimizations they can perform.  This is true in Spark 1.6 as well as 2.0.
+
+* [Project Tungsten](https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html) is an effort since Spark 1.3 to improve performance in multiple different ways
+  * Spark 1.5 introduced the [Tungsten Binary Format](https://issues.apache.org/jira/browse/SPARK-7076) that keeps data in binary blobs without deserializing it into JVM objects
+  * Spark then uses the `sun.misc.Unsafe` module to directly access the memory and work with the data outside the scope of the GC
+* Spark 1.x uses the Volcano Iterator Model ([pdf](http://paperhub.s3.amazonaws.com/dace52a42c07f7f8348b08dc2b186061.pdf)) to compose operations
+  * This results in many cache misses on CPU because of virtual function calls
+  * This can be improved by removing virtual function calls
+* [Whole Stage Code Generation](https://issues.apache.org/jira/browse/SPARK-12795) (in 2.0)
+  * Spark can pack and optimize job logic at job submission time
+  * By eliminating virtual function calls, this optimizes CPU in the Volcano model
+* Not all operations can be optimized by WSCG.  Can Vectorize those that cannot
+  * Takes multiple row-oriented records, batches them together, and presents them in columnar format ([Parquet](https://parquet.apache.org/))
+  * Does not help with virtual function calls, but fewer memory accesses for the data
+
+Here is the full presentation: [https://tinyurl.com/markus-spark-2-0](https://tinyurl.com/markus-spark-2-0)
