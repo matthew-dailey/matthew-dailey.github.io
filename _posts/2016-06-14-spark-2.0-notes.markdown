@@ -2,7 +2,7 @@
 layout: post
 title:  "Notes on Spark 2.0 Performance"
 date:   2016-06-14 14:00:00
-categories: spark
+tags: spark
 ---
 
 This post is just a collection of notes I took during [a Meetup](https://www.meetup.com/Apache-Spark-Maryland/events/231625107/?_af=event&_af_eid=231625107) about Spark 2.0 performance.  The main takeaway was if you don't have to, **don't use the RDD API directly**.  The [DataFrame and Dataset](http://spark.apache.org/docs/latest/sql-programming-guide.html) abstractions offer better performance because of optimizations they can perform.  This is true in Spark 1.6 as well as 2.0.
