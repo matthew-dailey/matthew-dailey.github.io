@@ -2,7 +2,7 @@
 layout: post
 title:  "Actually developing in Vagrant"
 date:   2015-08-20 19:00:00
-categories: vagrant intellij
+tags: vagrant intellij
 ---
 
 If you've had my experience trying to start with [Vagrant](https://www.vagrantup.com/), you were intrigued by the pitch:

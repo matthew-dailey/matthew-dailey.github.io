@@ -2,7 +2,7 @@
 layout: post
 title:  "Choosing a Wireless Channel"
 date:   2016-02-21 20:00:00
-categories: home networking
+tags: home-networking
 ---
 
 I recently decided to relocate the router in my house upstairs where I'm setting up my new home office.  This seemed like the simplest way to get a wired connection, and also the least destructive (compared to, say, trying to wire up the house for ethernet).

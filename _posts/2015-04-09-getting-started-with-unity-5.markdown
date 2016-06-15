@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting started in Unity 5"
 date:   2015-04-09 17:02:00
-categories: unity
+tags: unity
 ---
 
 I had looked into making a game in [Unity](http://unity3d.com) before in version 4.6 when the 2D toolkit was released. Since then, Unity's UI components were released, and now Unity 5.0 came out. Not too many 5.0 features caught my eye, but I figured now would be a good opportunity to get started on an idea I had.

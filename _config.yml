@@ -1,13 +1,23 @@
-# Site settings
-title: Programming needs more puns
-#email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-    Everyone needs a software blog, so here is mine.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
-twitter_username: matthew_dailey1
-github_username:  matthew-dailey
-safe: true
+# Jekyll Defaults
+title: programming needs more puns
+description: Everyone needs a software blog, so here is mine
+baseurl: "" # the subpath of your site, e.g. /blog
+rooturl: "/" # hack so that top link goes back to start page
 
-# Build settings
+url: ""
+twitter_username: matthew_dailey1
+github_username: matthew-dailey
+highlighter: rouge
 markdown: kramdown
+permalink: /post/:title/
+paginate: 4
+gems: [jekyll-paginate]
+paginate_path: "/page:num"
+rss_path: /feed.xml
+navigation:
+- text: About
+  url: /about/
+- text: Archives
+  url: /archives/
+- text: Tags
+  url: /tags/
