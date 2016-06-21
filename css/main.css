@@ -181,8 +181,11 @@ li {
     margin-left: 5%;
 	margin-top: 5px;
 	line-height: 1.6em;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	margin-bottom: 5px;
+}
+li li {
+    font-size: 1.0em;
 }
 a {
     color: #76a0de;
@@ -316,9 +319,6 @@ code {
         margin-bottom: 15px;
         margin-top: 12px;
         line-height: 1.6em;
-    }
-    li {
-    	font-size: 0.9em;
     }
     .heading {
         font-size: 32px
