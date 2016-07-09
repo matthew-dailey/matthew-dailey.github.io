@@ -45,30 +45,21 @@ With these tools in hand, we can go ahead and run the test, provoking a failure.
 
 ```
 $> dd if=/dev/zero of=/dev/null &
-$> nice -n 5 run-my-test.sh
+$> nice -n 5 ./run-my-test.sh
 ...see the failure...
 # stop the instance of dd
 $> kill %1
 ```
 
-There is some trial-and-error with finding the correct value for `nice` as well as if you want to run multiple instances of `dd`.  Watching the processes in `top` or `htop` to see how much CPU they get is helpful
+There is some trial-and-error with finding the correct value for `nice` as well as if you want to run multiple instances of `dd`.  Watching the processes in `top` or `htop` to see how much CPU they get is helpful.
 
+Now that you can reproduce the error, you can determine if you've _most likely_ fixed the test.
 
-```
-# eating up all those CPUs
-dd if=/dev/zero of=/dev/null &
-dd if=/dev/zero of=/dev/null &
-dd if=/dev/zero of=/dev/null &
-dd if=/dev/zero of=/dev/null &
+## Refactor Pt. 2 - Remove the flakiness
 
-# nice=1 gives 75%
-# nice=5 gives 50%
-# nice=10 gives 25%
-# nice=19 gives pretty much nothing
+Refactoring flaky tests that rely on `Thread.sleep()` could be an entire _series_ of blog posts.  So, I'll give some high-level advice on this that might get fleshed out in subsequent posts.
 
-# running test many times
-many -c -n 20 -- nice -n 1 mvn verify -DskipUnitTests -Dcheckstyle.skip=true -Denforcer.skip=true -Dmaven.javadoc.skip=true | tee out
-
-# cleaning up after yourself
-kill %1 %2 %3 %4
-```
+* `Thread.sleep()` is used to wait for _something_ to occur.  Figure out a way to recognize when that happens.
+* With asynchronous operations, the best case is that some form of `onSuccess()` or `onFailure()` callback can be attached.  This should remove the need for arbitrary waiting.  This can usually be expressed with Java [Futures](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html) or Guava [ListenableFutures](https://github.com/google/guava/wiki/ListenableFutureExplained).
+* Have an asynchronous operation output into some form of synchronized data structure.  In the main thread, do a blocking read from this data structure along with a timeout much longer than you'd expect the test to take.  The [BlockingQueue](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/BlockingQueue.html) interface is useful here, and the Guava helper [Queues.drain](https://google.github.io/guava/releases/19.0/api/docs/com/google/common/collect/Queues.html#drain(java.util.concurrent.BlockingQueue,%20java.util.Collection,%20int,%20long,%20java.util.concurrent.TimeUnit)) is great to do the blocking read.
+* If nothing else, there should be some value to poll on to wait for the desired output.  Here you can still use `Thread.sleep()`, but many iterations of it with a smaller timeout.  There should still be a maximum timeout (poll N times, and fail the test if it does not succeed in that timeframe), but this will improve the test time on average.
