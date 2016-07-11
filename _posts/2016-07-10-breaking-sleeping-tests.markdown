@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Waking Sleeping tests"
+title:  "Waking Sleeping Tests"
 date:   2016-07-10 10:40:00
 tags: java testing linux
 ---
