@@ -5,6 +5,25 @@ date:   2016-10-10 00:00:00
 tags: interviews
 ---
 
+# Moishe Lettvin - What I learned doing 250 interviews at Google
+
+I bring this piece up first because it speaks about Google's process, which sets the stage for the _status quo_ of technical interviews.
+
+Moishe Lettvin used to interview for Google, and at the time of [the video](https://www.youtube.com/watch?v=r8RxkpUvxK0), interviewed for Etsy.
+His perspective is mostly created from the Google way of doing interviews, but he does mention at the end that "Is this the best way?
+Probably not."  One of his main points is that interviewing is about finding signal vs. noise; determining if a candidate will be productive
+at your company, fun to work with, and able to both learn and teach others on the team.  He admits doing that is hard work, and likens interviewing
+to literary criticism rather than statistics; lots of subjectivity.
+
+So how can someone raise the level of the signal?
+* Transparency - give candidates as much information about the interview process as possible
+* Team effort - multiple people help round out the interview
+* Be prepared - organizations should teach their interviewers how to perform the interviews
+
+The quote from this video that I love is that there is "no reason to have an air of mystery in the interview process."
+He says that there is no advantage in keeping secrets about the interview process.  By being open, it allows you to let candidates know
+that you're trying to allow them to show you their skills.
+
 # Dan Luu - hiring lemons
 
 Dan Luu doesn't [shy away](http://danluu.com/wat/) from talking about [workplace problems](http://danluu.com/programmer-moneyball/).  A recent post in that vein is called [Hiring Lemons](http://danluu.com/hiring-lemons/), where he discusses and debunks part of Joel Spolsky's "Finding Great Developers."  It doesn't so much discuss current hiring practices, but more so makes observations about the experiences of candidates.  My notes are mostly interesting quotations.
@@ -36,7 +55,7 @@ At this point, you should really just read Sections 6 through 9 for their take o
 * Ask yourself questions about your interview process
 
 Section 6 - Warm up your candidates
-* "Not knowing what to expect makes candidates nervous. That’s a pointless handicap."  Lettvin echoes this point in the next section
+* "Not knowing what to expect makes candidates nervous. That’s a pointless handicap."  This echoes the comment from Lettvin above
 * "We worked from the assumption that a candidate’s resume, background, and even their previous experience had no bearing on their ability to perform the difficult and specialized work we did."
   * This one is pretty intriguing.  They go on to say that they purchased $80 work of books and sent them to candidates to study up before the interview.
   * This is complemented by the statement that most candidates did not know Matasano's domain very well at all when starting the interview process, but this still resulted in great hires
@@ -53,23 +72,6 @@ Section 8 - Standardize and discount interviews
 
 Section 9 - Ask yourself questions about your interview process
 * Nothing to add here, just ask yourself the questions in this section
-
-# Moishe Lettvin - What I learned doing 250 interviews at Google
-
-Moishe Lettvin used to interview for Google, and at the time of [the video](https://www.youtube.com/watch?v=r8RxkpUvxK0), interviewed for Etsy.
-His perspective is mostly created from the Google way of doing interviews, but he does mention at the end that "Is this the best way?
-Probably not."  One of his main points is that interviewing is about finding signal vs. noise; determining if a candidate will be productive
-at your company, fun to work with, and able to both learn and teach others on the team.  He admits doing that is hard work, and likens interviewing
-to literary criticism rather than statistics; lots of subjectivity.
-
-So how can someone raise the level of the signal?
-* Transparency - give candidates as much information about the interview process as possible
-* Team effort - multiple people help round out the interview
-* Be prepared - organizations should teach their interviewers how to perform the interviews
-
-The other quote from this video that I love is that there is "no reason to have an air of mystery in the interview process."
-He says that there is no advantage in keeping secrets about the interview process.  By being open, it allows you to let candidates know
-that you're trying to allow them to show you their skills.
 
 # Example - Slack's engineering walkthrough
 
