@@ -5,20 +5,56 @@ date:   2016-10-10 00:00:00
 tags: interviews
 ---
 
-## Dan Luu - hiring lemons
+# Dan Luu - hiring lemons
 
 Dan Luu doesn't [shy away](http://danluu.com/wat/) from talking about [workplace problems](http://danluu.com/programmer-moneyball/).  A recent post in that vein is called [Hiring Lemons](http://danluu.com/hiring-lemons/), where he discusses and debunks part of Joel Spolsky's "Finding Great Developers."  It doesn't so much discuss current hiring practices, but more so makes observations about the experiences of candidates.  My notes are mostly interesting quotations.
 
 * In his experience, Luu has found that companies rarely understand the value of their great employees.  "When I worked at a small company, we regularly hired great engineers from big companies that were too clueless to know what kind of talent they had."
 * Teams that have openings are more likely to have dysfunction.  Teams that are really good have low churn, and thus rarely have openings
-* My wife chimed in to follow on to that; in those situations, people who could be good miss out on the chance to work with good people
+  * My wife was able to relate to that: She said in those situations, people who could be good miss out on the chance to work with good people
   * She had left a job despite knowing there were some very smart people around her, but the work was not interesting, and there was so much churn that she knew the project would not attract other people that she could learn from.
 
-## Matasano - hiring
+# Matasano - hiring
 
-In Dan Luu's article, he mentions "Matasano famously solved their hiring problem by using a different set of filters and getting a different set of people."  Googling "Matasano Hiring" takes us to [their blogpost](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/) about their hiring process.
+In Dan Luu's article, he mentions "Matasano famously solved their hiring problem by using a different set of filters and getting a different set of people."  Googling "Matasano Hiring" takes us to [their blogpost](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/) about their hiring process.  Sections 1 and 2 have some background on hiring and their hiring needs, but the good stuff starts in Section 3.
 
-## Moishe Lettvin - What I learned doing 250 interviews at Google
+Section 3
+* "Next, interviewers make up their own interviews. This is crazy."
+* "It gets worse. We’re unclear about selection criteria."
+
+Section 4
+* "Engineering teams are not infantry squads. They aren’t selected for their ability to perform under unnatural stress. But that’s what most interview processes demand"
+
+Section 5
+* "Confidence bias selects for candidates who are good at interviewing."
+* "For every genuinely competent and effective developer who can ace a tough dev interview, there are many more genuinely competent and effective developers who can’t."
+
+At this point, you should really just read Sections 6 through 9 for their take on **How can we interview better?**, but here's my short notes
+* Warm up your candidates
+* Build work-sample tests
+* Standardize and discount interviews
+* Ask yourself questions about your interview process
+
+Section 6 - Warm up your candidates
+* "Not knowing what to expect makes candidates nervous. That’s a pointless handicap."  Lettvin echoes this point in the next section
+* "We worked from the assumption that a candidate’s resume, background, and even their previous experience had no bearing on their ability to perform the difficult and specialized work we did."
+  * This one is pretty intriguing.  They go on to say that they purchased $80 work of books and sent them to candidates to study up before the interview.
+  * This is complemented by the statement that most candidates did not know Matasano's domain very well at all when starting the interview process, but this still resulted in great hires
+
+Section 7 - Build work-sample tests
+* "Your goal is to collect data you can use for apples-apples comparisons, which means every candidate has to be working on the same problems."
+* "This [work-sample test they wrote] is a couple hundred lines of code, written in a few hours. It out-predicts any interview we’ve ever done."
+* This is a really great section on how you can use work samples to gather data about candidates in a repeatable, objective way.
+
+Section 8 - Standardize and discount interviews
+* They talk about having interviewers read from a script, despite knowing they will dislike it.
+* "Interviewers hate it. But we kept doing it, because we found that we were comfortable with “why” we were making hire/no-hire decisions when we had facts to look at."
+* "Phone screens carry almost every liability of interviews but further hamstring the candidate and the interviewer by occurring at a distance, being hastily scheduled, and, for the hiring team, having implicitly lower stakes than the in-person interview."
+
+Section 9 - Ask yourself questions about your interview process
+* Nothing to add here, just ask yourself the questions in this section
+
+# Moishe Lettvin - What I learned doing 250 interviews at Google
 
 Moishe Lettvin used to interview for Google, and at the time of [the video](https://www.youtube.com/watch?v=r8RxkpUvxK0), interviewed for Etsy.
 His perspective is mostly created from the Google way of doing interviews, but he does mention at the end that "Is this the best way?
