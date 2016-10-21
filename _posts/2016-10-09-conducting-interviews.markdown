@@ -5,6 +5,8 @@ date:   2016-10-09 18:00:00
 tags: interviews
 ---
 
+_This is the first part in a two-part series, the second part is [here](/post/interview-reading-material)._
+
 One of my favorite things to read about is technical interviewing; both giving and receiving.  I think the last five years have produced a lot of interesting reading material on the subject as smaller companies have been rejecting the Google-style interview marathon, just as Google rejected the 90s-era trivia-style interview.
 
 Now, most of this was just entertainment to me, until two things happened:
@@ -23,4 +25,4 @@ What I'm finding, however, is that taking time to prep for an interview is simpl
 
 My current hypothesis is that investing time to improve the entire interview process within an organization will pay off more than investing per-candidate time before interviews.  In a good case, this will either reduce the per-candidate time required, or even reduce the number of candidates that need interviewing either through quicker hiring of open positions, or better filtering of candidates early.
 
-So how can I help improve this process?  Like I said, there's a lot of reading material in this space.  My plan is to go through a slew of these articles, summarize their action items, and see what the overlap is.
+So how can I help improve this process?  There's a lot of reading material in this space.  My plan is to go through some of these articles, summarize their action items, and see what the overlap is.

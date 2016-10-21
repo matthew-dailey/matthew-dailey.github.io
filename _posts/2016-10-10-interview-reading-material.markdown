@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "The interview reading list"
+title:  "The interviewer reading list"
 date:   2016-10-10 00:00:00
 tags: interviews
 ---
+
+_This is the second part in a two-part series, the first part is [here](/post/conducting-interviews)._
 
 # Moishe Lettvin - What I learned doing 250 interviews at Google
 
@@ -76,3 +78,9 @@ Section 9 - Ask yourself questions about your interview process
 # Example - Slack's engineering walkthrough
 
 As Lettvin and Matasano explained, there is no advantage in keeping the interview process a secret.  Slack has taken that principle to heart and wrote a great blog post in May 2016 about [their hiring process](https://slack.engineering/a-walkthrough-guide-to-finding-an-engineering-job-at-slack-dc07dd7b0144).  It works as a great template for implementing this at your own company.
+
+# What next?
+
+I want to keep adding to the reading list each time I find another interesting article in this space.  This is by no means an exhaustive list, just the articles I've had time to read and take notes on.
+
+Have another hiring article you love that I missed?  Have critical thoughts on these or my analysis?  [Let me know](https://twitter.com/matthew_dailey1), I always want to try improving, especially on a subject I know so little about.
