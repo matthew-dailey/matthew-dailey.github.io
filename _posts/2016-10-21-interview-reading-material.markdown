@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The interviewer reading list"
-date:   2016-10-10 00:00:00
+date:   2016-10-21 19:00:00
 tags: interviews
 ---
 
