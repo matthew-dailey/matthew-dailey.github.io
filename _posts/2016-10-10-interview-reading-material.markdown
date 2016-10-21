@@ -70,3 +70,7 @@ So how can someone raise the level of the signal?
 The other quote from this video that I love is that there is "no reason to have an air of mystery in the interview process."
 He says that there is no advantage in keeping secrets about the interview process.  By being open, it allows you to let candidates know
 that you're trying to allow them to show you their skills.
+
+# Example - Slack's engineering walkthrough
+
+As Lettvin and Matasano explained, there is no advantage in keeping the interview process a secret.  Slack has taken that principle to heart and wrote a great blog post in May 2016 about [their hiring process](https://slack.engineering/a-walkthrough-guide-to-finding-an-engineering-job-at-slack-dc07dd7b0144).  It works as a great template for implementing this at your own company.
