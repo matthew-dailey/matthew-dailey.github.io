@@ -32,9 +32,8 @@ that you're trying to allow them to show you their skills.
 Dan Luu doesn't [shy away](http://danluu.com/wat/) from talking about [workplace problems](http://danluu.com/programmer-moneyball/).  A recent post in that vein is called [Hiring Lemons](http://danluu.com/hiring-lemons/), where he discusses and debunks part of Joel Spolsky's "Finding Great Developers."  It doesn't so much discuss current hiring practices, but more so makes observations about the experiences of candidates.  My notes are mostly interesting quotations.
 
 * In his experience, Luu has found that companies rarely understand the value of their great employees.  "When I worked at a small company, we regularly hired great engineers from big companies that were too clueless to know what kind of talent they had."
-* Teams that have openings are more likely to have dysfunction.  Teams that are really good have low churn, and thus rarely have openings
-  * My wife was able to relate to that: She said in those situations, people who could be good miss out on the chance to work with good people
-  * She had left a job despite knowing there were some very smart people around her, but the work was not interesting, and there was so much churn that she knew the project would not attract other people that she could learn from.
+* Teams that have openings are more likely to have dysfunction.  Teams that are really good have low churn, and thus, rarely have openings.
+  * My wife was able to relate to that: She had left a job despite knowing there were some very smart people around her, but the work was not interesting, and there was so much churn that she knew the project would not attract other people that she could learn from.
 
 # Matasano - hiring
 
