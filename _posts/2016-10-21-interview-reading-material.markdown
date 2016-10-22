@@ -53,12 +53,7 @@ Section 5
 * "Confidence bias selects for candidates who are good at interviewing."
 * "For every genuinely competent and effective developer who can ace a tough dev interview, there are many more genuinely competent and effective developers who can’t."
 
-At this point, you should really just read Sections 6 through 9 for their take on **How can we interview better?**, but here's my short notes
-
-* Warm up your candidates
-* Build work-sample tests
-* Standardize and discount interviews
-* Ask yourself questions about your interview process
+At this point, you should really just read Sections 6 through 9 for their take on **How can we interview better?**, but here are my short notes.
 
 Section 6 - Warm up your candidates
 
