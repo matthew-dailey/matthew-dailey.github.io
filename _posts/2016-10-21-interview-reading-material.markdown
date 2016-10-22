@@ -15,9 +15,9 @@ Moishe Lettvin used to interview for Google, and at the time of [the video](http
 His perspective is mostly created from the Google way of doing interviews, but he does mention at the end that "Is this the best way?
 Probably not."  One of his main points is that interviewing is about finding signal vs. noise; determining if a candidate will be productive
 at your company, fun to work with, and able to both learn and teach others on the team.  He admits doing that is hard work, and likens interviewing
-to literary criticism rather than statistics; lots of subjectivity.
+to literary criticism rather than statistics: lots of subjectivity.
 
-So how can someone raise the level of the signal?
+So, how can someone raise the level of the signal?
 
 * Transparency - give candidates as much information about the interview process as possible
 * Team effort - multiple people help round out the interview
@@ -59,7 +59,7 @@ Section 6 - Warm up your candidates
 
 * "Not knowing what to expect makes candidates nervous. That’s a pointless handicap."  This echoes the comment from Lettvin above
 * "We worked from the assumption that a candidate’s resume, background, and even their previous experience had no bearing on their ability to perform the difficult and specialized work we did."
-  * This one is pretty intriguing.  They go on to say that they purchased $80 work of books and sent them to candidates to study up before the interview.
+  * This one is pretty intriguing.  They go on to say that they purchased $80 worth of books and sent them to candidates to study up before the interview.
   * This is complemented by the statement that most candidates did not know Matasano's domain very well at all when starting the interview process, but this still resulted in great hires
 
 Section 7 - Build work-sample tests
