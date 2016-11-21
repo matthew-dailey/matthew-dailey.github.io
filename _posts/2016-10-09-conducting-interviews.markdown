@@ -18,7 +18,7 @@ I'm going to focus on #2 here, since that's the challenge I'm currently facing a
 
 So, looking back 10 years, Joel Spolsky makes an interesting observation about [being an interviewer](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html):
 
-> You are going to be making Major Decisions Aboutx [the candidate's] Life soon
+> You are going to be making Major Decisions About [the candidate's] Life soon
 
 Wow, I better not mess this up; I remember the pressure of being on the other side of the table.  Knowing this, when I started interviewing candidates, I knew to put in the effort of actually reading the resume and coming up with relevant questions before the interview.  They really care about the result of this interview; I should respect them enough to do that minimal work.
 
