@@ -235,6 +235,9 @@ footer .rss {
     margin-right: -.32px;
     float: right;
 }
+footer .license {
+    text-align: center;
+}
 footer .rss img {
     border: 0
 }
