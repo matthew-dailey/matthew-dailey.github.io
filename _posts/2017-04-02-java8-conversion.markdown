@@ -33,13 +33,20 @@ The HashMap specification explicitly makes no guarantee about iteration order.
 The iteration order of the LinkedHashMap class will be maintained.
 
 So, any code relying on that iteration order ends up breaking.
-For the most part, this reliance manifests as generating String representations of data structures.
-In other words, serialized JSON, or SQL.
+For the most part, this reliance manifests when generating String representations of data structures.
+In other words, serializing JSON, or building SQL.
 
 ## How to fix it
 
-* Use a fluent object - jackson for JSON.  Note that org.json's `JSONObject` does not properly perform equality checks
-  * mention jsonassert project, but note how it conflicts with org.json if it's already in your classpath
+Depending on the errors, there are a few options for making fixes.
+
+* For JSON, performing comparison of marshalled JSON objects does not care about the underlying order of keys in maps.
+  * `jackson` is my preferred library for this
+  * note that `org.json`'s `JSONObject` does not properly perform equality checks of JSON trees,
+  so I don't recommend using it for this purpose
+  * another library I looked at was [JSONassert](https://github.com/skyscreamer/JSONassert), but it includes a duplicate
+  class that is in `org.json` (`JSONString`).  My project is configured to disallow duplicate classes, so this was
+  a non-starter.
 * Use [LinkedHashMap](http://docs.oracle.com/javase/7/docs/api/java/util/LinkedHashMap.html) or
 [LinkedHashSet](http://docs.oracle.com/javase/7/docs/api/java/util/LinkedHashSet.html) to have a predictable sort order
 between versions of Java.
@@ -47,8 +54,8 @@ between versions of Java.
 This can be accomplished with either [TreeSet](http://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html),
 an implementation of `SortedSet`, which extends `Set`;
 or [TreeMap](http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html),
-an implementation of `SortedMap`, which extends ``Map`.
+an implementation of `SortedMap`, which extends `Map`.
 
-# Running tests with a different JDK
+## How to test the fix
 
 `-Dsurefire.jvm=/path/to/other/jvm/bin/java`
