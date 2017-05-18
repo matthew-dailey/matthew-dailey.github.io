@@ -1,5 +1,6 @@
 _site
 .sass-cache
+.idea
 *.swp
 
 # markdown files I just copied in root dir
