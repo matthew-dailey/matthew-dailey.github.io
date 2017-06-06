@@ -32,22 +32,21 @@ performance during high-collision scenarios.  They explicitly state
 The HashMap specification explicitly makes no guarantee about iteration order.
 The iteration order of the LinkedHashMap class will be maintained.
 
-So, any code relying on that iteration order ends up breaking.
+So, any code relying on that iteration order ends up breaking between Java versions.
 For the most part, this reliance manifests when generating String representations of data structures.
 In other words, serializing JSON, or building SQL.
 
 ## How to fix it
 
-Depending on what objects are being compared, there are a few options for making fixes.
-
 ### JSON
 
-For JSON, the main solution is to do `equals` comparison of marshalled JSON objects rather than the String representation.
+For JSON, the main solution is to perform `equals` comparison of marshalled JSON objects rather than the String representation.
 
 ```java
   public static void assertStringsEqual(String message, String expected, String actual) throws IOException {
     ObjectMapper objectMapper = new ObjectMapper();
 
+    // marshall the JSON strings into JsonNode objects for comparison
     JsonNode expectedNode = objectMapper.readTree(expected);
     JsonNode actualNode = objectMapper.readTree(actual);
 
@@ -65,7 +64,7 @@ Another library I looked at was [JSONassert](https://github.com/skyscreamer/JSON
 class that is in `org.json` (`JSONString`).  My project is configured to disallow duplicate classes,
 so this dependency would have been a hassle to bring in.
 
-### Other data
+### Other data types
 
 These other sort-order-dependent bugs mostly came up when comparing expected SQL statements with constructed SQL.
 The actual SQL was sorted differently in Java 7 and Java 8, so I had to make it consistent using these techniques.
@@ -79,6 +78,25 @@ an implementation of `SortedSet`, which extends `Set`;
 or [TreeMap](http://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html),
 an implementation of `SortedMap`, which extends `Map`.
 
-## How to test the fix
+## Building and Running tests with different Java versions
 
-`-Dsurefire.jvm=/path/to/other/jvm/bin/java`
+This is a pretty interesting one: my organization needed to continue _building_ with JDK 7,
+but the tests needed to additionally run against JDK 8.
+
+If your project uses Maven, the Surefire plugin has the
+`jvm` [configuration property](http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#jvm)
+for specifying a different JVM when running tests.
+Note that this property should point to the `java` executable, not the home directory for that JDK.
+
+```
+# on OSX
+java8_path=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/bin/java
+mvn clean test -Djvm=${java8_path}
+```
+
+Similarly, the Failsafe plugin also has the
+`jvm` [configuration property](http://maven.apache.org/surefire/maven-failsafe-plugin/integration-test-mojo.html#jvm)
+for specifying a different JVM when running integration tests, like with `mvn verify`.
+
+And that's it!  If you were to build with JDK 8 as well, it's likely other issues would arise.
+Whenever I get around to making Java 8 the minimum version, I'll probably write about the new issues we run into there.
