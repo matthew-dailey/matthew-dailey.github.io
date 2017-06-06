@@ -4,6 +4,12 @@ This project is my personal blog hosted on GitHub Pages running Jekyll, which it
 
 [matthew-dailey.github.io](https://matthew-dailey.github.io/)
 
+## Building
+
+Normally, `jekyll serve` works just fine.
+
+If there are errors about missing dependencies, `bundle exec jekyll serve` should work better.
+
 ## Licenses
 
 Code for this project is [licensed](LICENSE) under the MIT License.
