@@ -81,7 +81,7 @@ an implementation of `SortedMap`, which extends `Map`.
 ## Building and Running tests with different Java versions
 
 This is a pretty interesting one: my organization needed to continue _building_ with JDK 7,
-but the tests needed to additionally run against JDK 8.
+but the tests also needed to pass when run with JDK 8.
 
 If your project uses Maven, the Surefire plugin has the
 `jvm` [configuration property](http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#jvm)
