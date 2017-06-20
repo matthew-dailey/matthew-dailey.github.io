@@ -5,6 +5,8 @@ date:   2017-06-05 12:00:00
 tags: java
 ---
 
+_Update: This article also appears on the [Rocana blog](http://blog.rocana.com/getting-tests-to-pass-in-java-8) with much nicer formatting_
+
 I recently went through the fun (no, really!) task of ensuring a large codebase was able to run on Java 8.
 It had originally been written to work on Java 6 and Java 7, and Java 6 support was dropped before I started working with it.
 The transition to running on Java 8 is intended to be seamless, but it's easy to have a codebase that accidentally relies on
