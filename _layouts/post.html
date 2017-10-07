@@ -3,7 +3,10 @@ layout: default
 ---
 <article>
 <div class="heading">{{ page.title }}</div>
-<p class="meta"><a class="permalink" href="{{ site.baseurl }}{{ post.url }}">&#9679;</a> {{ page.date | date_to_string }}</p>
+<p class="meta">
+    <a class="permalink" href="{{ site.baseurl }}{{ post.url }}">&#9679;</a>
+    <!-- Use the original 'date' filter because the Jekyll date_to_string filter was causing a build failure in github-pages v163 -->
+    {{ page.date | date: "%d %b %Y" }} {% include tags.html %}
+</p>
 {{ content }}
-{% include tags.html %}
 </article>
