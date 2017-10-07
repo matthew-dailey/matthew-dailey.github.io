@@ -10,6 +10,21 @@ Normally, `jekyll serve` works just fine.
 
 If there are errors about missing dependencies, `bundle exec jekyll serve` should work better.
 
+## Creating new posts
+
+```
+$ ./new-post.sh "This is a post title"
+Created ./_posts/2017-10-06-this-is-a-post-title.markdown
+ 
+$ cat ./_posts/2017-10-06-this-is-a-post-title.markdown
+---
+layout: post
+title:  "This is a post title"
+date:   2017-10-06 22:00:00
+tags:
+---
+```
+
 ## Licenses
 
 Code for this project is [licensed](LICENSE) under the MIT License.
