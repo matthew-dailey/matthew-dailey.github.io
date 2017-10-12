@@ -6,8 +6,10 @@ permalink: /about/
 
 I'm Matt Dailey. I've been a professional software engineer since 2010.
 
-Currently, I work at [Rocana](https://www.rocana.com/) writing and testing an awesome big data solution,
-while hoping our name doesn't sound like the [name of a Pokemon](https://pixelastic.github.io/pokemonorbigdata/).
+Currently, I work at [Splunk](https://www.splunk.com/) working on the future of the data platform.
+
+Formerly:
+* Rocana - building a big data monitoring solution.
 
 This blog is mostly anything longer than a tweet that I either worked with, toyed with, or probably just read about.
 
