@@ -1,0 +1,17 @@
+# version of docker-compose
+version: '2'
+
+# Create one service that runs the blog using jekyll
+# Continue using latest image because GitHub seems to be constantly updating
+services:
+    site:
+        command: 'jekyll serve'
+        image: jekyll/jekyll:latest
+        volumes:
+            # mount where the site is built to so future builds can use them
+            - $PWD:/srv/jekyll
+            # mount where bundler dependencies are stored for repeated build
+            - $PWD/vendor/bundle:/usr/local/bundle
+        ports:
+            # expose only the port where jekyll serves content
+            - 4000:4000

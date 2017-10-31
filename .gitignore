@@ -3,5 +3,7 @@ _site
 .idea
 *.swp
 
+vendor
+
 # markdown files I just copied in root dir
 /*.markdown
