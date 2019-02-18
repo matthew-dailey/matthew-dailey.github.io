@@ -15,8 +15,11 @@ TEMPLATE_FILE="$HERE/post-template.markdown"
 today=$(date +%Y-%m-%d)
 now=$(date +%H):00:00
 
-# take the title, replace spaces with dashes, and lowercase it
-title_filename=$(echo "$title" | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+# take the title, replace spaces with dashes, remove characters like double-quotes, and lowercase it
+title_filename=$(echo "$title" \
+    | tr ' ' '-' \
+    | tr -d '"' \
+    | tr '[:upper:]' '[:lower:]')
 filename="${today}-${title_filename}.markdown"
 dest_path="$HERE/_posts/$filename"
 
