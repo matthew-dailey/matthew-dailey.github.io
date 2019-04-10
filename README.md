@@ -33,6 +33,24 @@ docker-compose create
 docker-compose start site
 ```
 
+### Updating dependencies
+
+There are a few situations where you want to update the ruby dependencies.  This is usually because:
+* There are formatting issues with the version of a dependency currently used
+* There are security vulnerabilities in the current set of dependencies
+
+To update the dependencies
+* Update the `Gemfile`
+* Use Bundler to update `Gemfile.lock`:
+
+```
+bundle install --path vendor/bundle
+```
+
+Check in both `Gemfile` and `Gemfile.lock`.
+
+One commit that made a change like this is [c90c03c](https://github.com/matthew-dailey/matthew-dailey.github.io/commit/c90c03c9)
+
 ## Creating new posts
 
 ```
