@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'github-pages', '~> 197', group: :jekyll_plugins
+gem 'github-pages', '~> 208', group: :jekyll_plugins
 
-# based on CVE-2019-5477
-gem "nokogiri", ">= 1.10.4"
+# based on CVE-2020-7595
+gem "nokogiri", ">= 1.10.8"
