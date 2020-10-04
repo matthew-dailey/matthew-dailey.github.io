@@ -77,5 +77,21 @@ then we can stop pushing to the old registries
 
 ## What would you do differently next time?
 
-* Have a kickoff meeting with everyone involved.  It was apparent not every team had the same context on the problem,
+### Have a kickoff meeting with everyone involved
+
+It was apparent not every team had the same context on the problem,
 the constraints, or the work required to accomplish the goals.
+This also meant not every team had to reinvent this process.  We tried to write it down for them,
+but having time to really cement this and get Q&A for anything we missed would have helped a lot.
+
+### Start on manual migration earlier
+
+This would have unblocked a lot of repos whose only dependency on the old registry was on old tags of images.
+This also would have eliminated a step where some repos first push to the new registry,
+then later pull from the new registry.
+
+### Establish what success looks like earlier
+
+It took some time to understand how we know the migration is complete.
+Knowing that earlier makes it easier to explain the goal to the team,
+and to find an owner for that verification.
