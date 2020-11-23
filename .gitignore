@@ -1,9 +1,14 @@
 _site
 .sass-cache
+.bundle
 .idea
-*.swp
 
 vendor
+
+# vim
+*.swp
+# VSCode
+*.code-workspace
 
 # markdown files I just copied in root dir
 /*.markdown
