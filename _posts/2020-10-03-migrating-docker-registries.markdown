@@ -77,6 +77,23 @@ then we can stop pushing to the old registries
 
 ## What would you do differently next time?
 
+### Establish what success looks like earlier
+
+It took some time to understand how we know the migration is complete.
+Knowing that earlier makes it easier to explain the goal to the team,
+and to find an owner for that verification.
+For us, success looked like successful builds of our on-premise software,
+ans successful deployments of our cloud software.
+
+### Write out what work is needed
+
+Once we knew what it would look like to be finished,
+we could work backwards and defined the tasks along with their ordered dependencies.
+One thing we all agreed would have been helpful would be a diagram showing the dependencies.
+
+It was about halfway through the project before we started doing this,
+and once we did, it was easy to communicate the work remaining and the order to tackle the work.
+
 ### Have a kickoff meeting with everyone involved
 
 It was apparent not every team had the same context on the problem,
@@ -89,9 +106,3 @@ but having time to really cement this and get Q&A for anything we missed would h
 This would have unblocked a lot of repos whose only dependency on the old registry was on old tags of images.
 This also would have eliminated a step where some repos first push to the new registry,
 then later pull from the new registry.
-
-### Establish what success looks like earlier
-
-It took some time to understand how we know the migration is complete.
-Knowing that earlier makes it easier to explain the goal to the team,
-and to find an owner for that verification.
